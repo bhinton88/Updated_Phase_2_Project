@@ -1,6 +1,43 @@
 import React from "react";
+import { Table } from "react-bootstrap"
 
-function BudgetPage({ tripData }) {
+
+function BudgetPage({ tripData, eventsData }) {
+
+
+  return(
+    <div>
+      {tripData.map(value => 
+        <div id="budgetCard">
+          <h2>{value.tripName}</h2>
+          <div id="tablecontainer">
+            <Table striped border hover size="sm" >
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Category</th>
+                  <th>Date of Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                {eventsData
+                .filter(data => value.id === data.trip_id)
+                .map(data => 
+                      <tr key={data.id}>
+                        <td>{data.event}</td>
+                        <td>{data.category}</td>
+                        <td>{data.date}</td>
+                      </tr>
+                    )
+                }
+              </tbody>
+            </Table>
+          </div>
+        </div>
+        )}
+
+    </div>
+  )
 
 }
 

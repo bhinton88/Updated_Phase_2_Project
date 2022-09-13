@@ -38,10 +38,15 @@ function App() {
           />
         </Route>
         <Route path="/Event_Form">
-          <EventSubmit eventsData={eventsData} />
+          <EventSubmit 
+          eventsData={eventsData} 
+          />
         </Route>
         <Route path="/Budget">
-          <BudgetPage tripData={tripData} />
+          <BudgetPage 
+          tripData={tripData} 
+          eventsData={eventsData}
+          />
         </Route>
       </Switch>
     </div>
@@ -62,8 +67,7 @@ export default App;
 // -----Events Page
 // --Submit event
 // --budget page 
-// ---budget list
-// ---budget pie graph
+//
 
 
 // for each trip, we want to route to a page where we can see that trips events, we want our code
