@@ -1,0 +1,57 @@
+{
+  "trips": [
+    {
+      "id": 1,
+      "tripName": "European getaway",
+      "countries": [
+        "Denmark",
+        "Greece",
+        "UK"
+      ],
+      "start_date": "2011-08-01",
+      "end_date": "2011-08-25"
+    },
+    {
+      "tripName": "Scandinavian Adventure",
+      "countries": [
+        "Norway",
+        "Sweden",
+        "Finland",
+        "Denmark"
+      ],
+      "start_date": "2017-07-15",
+      "end_date": "2017-08-15",
+      "id": 2
+    },
+    {
+      "tripName": "Oktoberfest",
+      "countries": [
+        "Germany"
+      ],
+      "start_date": "2018-09-15",
+      "end_date": "2018-09-25",
+      "id": 3
+    },
+    {
+      "tripName": "African Safari",
+      "countries": [
+        "Namibia",
+        "South Africa",
+        "Zimbabwe"
+      ],
+      "start_date": "2023-04-15",
+      "end_date": "2023-04-30",
+      "id": 4
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "trip_id": 1,
+      "event": "Visiting Rosenborg Castle",
+      "cost": 15,
+      "category": "Tourism",
+      "date": "2011-08-08"
+    }
+  ]
+}
