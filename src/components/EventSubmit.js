@@ -1,7 +1,17 @@
 import React, { useState } from "react";
-import { Form } from 'semantic-ui-react'
+import { Form, Input } from 'semantic-ui-react'
 
-function EventSubmit( ) {
+function EventSubmit({ tripData }) {
+
+  const categoryOptions = [
+    { text:"Tourism", value: "Tourism"},
+    { text:"Food", value:"Food"},
+    { text:"Transportation", value:"Transportation"},
+    { text:"Lodging", value:"Lodging"}]
+
+  const tripNameOptions = tripData.map(value => {
+    return {id: value.id, text: value.tripName, value: value.tripName}
+  })
 
   const [formData, setFormData] = useState({
     trip_id: 0,
@@ -11,7 +21,8 @@ function EventSubmit( ) {
     date: "",
   })
 
-  function handleChange (event,value){
+  function handleChange (e, {value, name}){
+    console.log(name)
     console.log(value)
   }
 
@@ -41,14 +52,23 @@ function EventSubmit( ) {
             onChange={handleChange}
           />
           </Form.Group>
-          <br/>
-          <label>Choose an Event Category</label>
-          <select name="category">
-            <option value="Tourism">Tourism</option>
-            <option value="Food">Food</option>
-            <option value="Transportation">Transportation</option>
-            <option value="Lodging">Lodging</option>
-          </select>
+          <Form.Select
+            label="Trip Name"
+            options={tripNameOptions}
+            placeholder="Select Trip Name"
+            selection
+            //dont forget to use value for controlled input
+          >
+          </Form.Select>
+          <Form.Select
+            label="Event Category"
+            name="category"
+            options={categoryOptions}
+            placeholder="Select Event Category"
+            selection
+            //dont forget to use value for controlled input
+          >
+          </Form.Select>
           <Form.Button>Submit</Form.Button>
       </Form>
     </div>

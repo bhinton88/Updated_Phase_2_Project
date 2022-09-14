@@ -49,7 +49,7 @@
       "id": 1,
       "trip_id": 1,
       "event": "Visiting Rosenborg Castle",
-      "cost": 15,
+      "cost": "15.00",
       "category": "Tourism",
       "date": "2011-08-08"
     }

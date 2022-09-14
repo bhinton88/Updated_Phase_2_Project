@@ -5,7 +5,7 @@ function EventsPage({ tripId, eventsData }) {
 
 return (
   <div>
-    <Table striped border hover >
+    <Table striped border="true" hover >
       <thead>
         <tr>
           <th>Event</th>

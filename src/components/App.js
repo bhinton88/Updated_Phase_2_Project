@@ -40,6 +40,7 @@ function App() {
         <Route path="/Event_Form">
           <EventSubmit 
           eventsData={eventsData} 
+          tripData={tripData} 
           />
         </Route>
         <Route path="/Budget">

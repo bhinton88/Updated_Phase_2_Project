@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import EventsPage from "./EventsPage";
-import { Accordion } from "react-bootstrap";
+import { Accordion, Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 
 function TripCard({ trip, eventsData }) {
+
+  const history = useHistory();
 
   const [toggleEvents, setToggleEvents] = useState(false)
 
   function handleClick (event) {
     setToggleEvents( toggleEvents => !toggleEvents)
-    console.log(event.target.id)
+  }
+
+  function clickForEventSubmit() {
+    history.push("/Event_Form")
+  }
+
+  function clickForBudget() {
+    history.push("/Budget")
   }
 
 
@@ -24,6 +34,10 @@ function TripCard({ trip, eventsData }) {
           </ul>
           <p>Trip Start Date: {trip.start_date}</p>
           <p>Trip End Date: {trip.end_date}</p>
+          <div id="tripbuttoncontainer">
+            <Button onClick={clickForEventSubmit} >Submit New Events</Button>
+            <Button onClick={clickForBudget}>Let me check that budget!</Button>
+          </div>
           <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header onClick={handleClick}>{toggleEvents ? "Hide Trip Events" : "Show Trip Events"}</Accordion.Header>
@@ -32,8 +46,6 @@ function TripCard({ trip, eventsData }) {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-          {/* <button id={trip.id} className="ui button" onClick={handleClick}>{toggleEvents ? "Hide Trip Events" : "Show Trip Events"}</button>
-                {toggleEvents ? <EventsPage eventsData={eventsData} tripId={trip.id} /> : null} */}
       </div>
     </div>
   )
