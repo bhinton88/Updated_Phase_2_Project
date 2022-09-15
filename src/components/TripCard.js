@@ -26,23 +26,27 @@ function TripCard({ trip, eventsData }) {
   return(
     <div id="tripcardcontainer">
       <div id="tripCard">
-        <h2><strong>{trip.tripName}</strong></h2>
-        <br/>
-        <h4>Countries Visited:</h4>
-          <ul>
-            {trip.countries.map(value => <li key={value} >{value}</li>)}
-          </ul>
-          <p>Trip Start Date: {trip.start_date}</p>
-          <p>Trip End Date: {trip.end_date}</p>
-          <div id="tripbuttoncontainer">
-            <Button onClick={clickForEventSubmit} >Submit New Events</Button>
-            <Button onClick={clickForBudget}>Let me check that budget!</Button>
+        <div id="infoandbuttons">
+          <div id = "infocontainer">
+            <h2><strong>{trip.tripName}</strong></h2>
+            <br/>
+            <h4>Countries Visited:</h4>
+              <ul>
+                {trip.countries.map(value => <li key={value} >{value}</li>)}
+              </ul>
+              <p>Trip Start Date: {trip.start_date}</p>
+              <p>Trip End Date: {trip.end_date}</p>
+            </div>
+            <div id="tripbuttoncontainer">
+              <Button className="button" onClick={clickForEventSubmit}>Submit New Events</Button>
+              <Button className="button" onClick={clickForBudget}>Let me check that budget!</Button>
+            </div>
           </div>
           <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header onClick={handleClick}>{toggleEvents ? "Hide Trip Events" : "Show Trip Events"}</Accordion.Header>
               <Accordion.Body>
-              {toggleEvents ? <EventsPage eventsData={eventsData} tripId={trip.id} /> : null}
+              {toggleEvents ? <EventsPage eventsData={eventsData} tripId={trip.tripName} /> : null}
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>

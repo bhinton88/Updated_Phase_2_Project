@@ -24,6 +24,14 @@ function App() {
     .then(data =>  setEventsData(data))
   },[] )
 
+  function handleNewEvent(data) {
+    setEventsData([...eventsData, data])
+  }
+
+  function handleNewTrip(data){
+    setTripData([...tripData, data])
+  }
+
   return (
     <div>
       <NavBar />
@@ -35,12 +43,14 @@ function App() {
            <TripPage 
             tripData={tripData} 
             eventsData={eventsData}
+            handleNewTrip={handleNewTrip}
           />
         </Route>
         <Route path="/Event_Form">
           <EventSubmit 
           eventsData={eventsData} 
           tripData={tripData} 
+          handleNewEvent={handleNewEvent}
           />
         </Route>
         <Route path="/Budget">

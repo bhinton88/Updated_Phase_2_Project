@@ -42,16 +42,73 @@
       "start_date": "2023-04-15",
       "end_date": "2023-04-30",
       "id": 4
+    },
+    {
+      "tripName": "test",
+      "countries": [
+        "United States"
+      ],
+      "start_date": "2022-09-27",
+      "end_date": "2022-09-28",
+      "id": 5
     }
   ],
   "events": [
     {
       "id": 1,
-      "trip_id": 1,
+      "tripName": "Scandinavian Adventure",
       "event": "Visiting Rosenborg Castle",
       "cost": "15.00",
       "category": "Tourism",
       "date": "2011-08-08"
+    },
+    {
+      "tripName": "European getaway",
+      "event": "High Noon Tea",
+      "cost": "25.00",
+      "category": "Food",
+      "date": "2011-08-17",
+      "id": 2
+    },
+    {
+      "tripName": "European getaway",
+      "event": "Sailing charter",
+      "cost": "200.00",
+      "category": "Tourism",
+      "date": "2011-08-05",
+      "id": 3
+    },
+    {
+      "tripName": "European getaway",
+      "event": "Hostel in London",
+      "cost": "25.00",
+      "category": "Lodging",
+      "date": "2011-08-20",
+      "id": 4
+    },
+    {
+      "tripName": "Scandinavian Adventure",
+      "event": "Fjord Tour",
+      "cost": "75.00",
+      "category": "Tourism",
+      "date": "2017-07-22",
+      "id": 5
+    },
+    {
+      "tripName": "European getaway",
+      "event": "Ferry to Helsinki",
+      "cost": "150.00",
+      "category": "Transportation",
+      "date": "2017-08-01",
+      "id": 6
+    },
+    {
+      "tripName": "European getaway",
+      "event": "Visit Tivoli",
+      "cost": "30.50",
+      "category": "Tourism",
+      "date": "2011-08-04",
+      "id": 7
     }
   ]
 }

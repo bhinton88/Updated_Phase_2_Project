@@ -2,12 +2,14 @@ import React from "react";
 import TripForm from "./TripForm"
 import TripList from "./TripList";
 
-function TripsPage({ tripData, eventsData }) {
+function TripsPage({ tripData, eventsData, handleNewTrip }) {
 
 
   return (
     <div>
-      <TripForm />
+      <TripForm 
+        handleNewTrip={handleNewTrip}
+      />
       <TripList 
         tripData={tripData} 
         eventsData={eventsData}

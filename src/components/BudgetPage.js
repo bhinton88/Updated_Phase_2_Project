@@ -1,21 +1,19 @@
 import React from "react";
 import { Table } from "react-bootstrap"
-import Chart from "react-apexcharts"
+import PieChart from "./PieChart";
+
 
 
 
 function BudgetPage({ tripData, eventsData }) {
 
-  const series = eventsData.map(value => parseFloat(value.cost) )
-
-  const labels = eventsData.map(value => value.category)
-    
 
   return(
     <div>
       <div>
       {tripData.map(value => 
-        <div id="budgetCard" key={value.id}>
+        <div id="budgetcard" key={value.id}>
+          <div id="infocontainer">
           <h2>{value.tripName}</h2>
           <div id="tablecontainer">
             <Table striped border="true" hover size="sm" >
@@ -28,7 +26,7 @@ function BudgetPage({ tripData, eventsData }) {
               </thead>
               <tbody>
                 {eventsData
-                .filter(data => value.id === data.trip_id)
+                .filter(data => value.tripName === data.tripName)
                 .map(data => 
                       <tr key={data.id}>
                         <td>{data.event}</td>
@@ -39,18 +37,12 @@ function BudgetPage({ tripData, eventsData }) {
                 }
               </tbody>
             </Table>
+            </div>
           </div>
-          <div id="piechartcontainer">
-            <Chart 
-              type="pie"
-              width={300}
-              height={300}
-              series={series}
-              options={{labels}}
-            >
-
-            </Chart>
-          </div>
+          <PieChart 
+            tripId={value.tripName} 
+            eventsData={eventsData}
+          />
         </div>
       )}
     </div>

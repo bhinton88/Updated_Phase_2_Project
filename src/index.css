@@ -17,16 +17,19 @@ body {
     background-color: whitesmoke;
 }
 
-#budgetCard {
+#budgetcard {
   border-radius: 1rem;
   padding: 0.5rem;
-  width: 70% ;
   height: auto;
-  display: flex;
+  display: inline-flex;
   margin: 1rem 1rem;
-  flex-direction: column;
+  flex-direction: row;
   background-color: whitesmoke;
   justify-content: center;
+}
+
+#piechartcontainer {
+ margin-top: 20px;
 }
 
 #tripcardcontainer {
@@ -61,4 +64,18 @@ body {
   padding: 10px; 
 }
 
+#infoandbuttons {
+  display: inline-flex;
+}
 
+#tripbuttoncontainer {
+  margin-left: auto;
+}
+
+.button {
+margin-inline: 5px;
+}
+
+#piechartcontainer {
+  margin-left: auto;
+}

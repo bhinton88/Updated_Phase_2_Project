@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Form,Dropdown, Button } from 'semantic-ui-react'
 
-function TripForm() {
+function TripForm({ handleNewTrip }) {
   const [countriesData, setCountriesData] = useState([]) // for our select element
   const [formData, setFormData] = useState({
     tripName: "",
@@ -24,10 +24,10 @@ function TripForm() {
   // for on change event handlers using semantic UI, we MUST pass both an event and a data
   // argument in order to extract the value out of the input
 
-  function handleCountryAdd (event, data){
+  function handleCountryAdd (event, { value }){
     setFormData({
       ...formData,
-      countries: data.value
+      countries: value
     })
     console.log(formData)
   }
@@ -50,10 +50,7 @@ function TripForm() {
       body: JSON.stringify(formData)
     })
     .then(response => response.json())
-    .then(data => console.log(data))
-
-    // will need to add this to our trip list page once we have that component
-
+    .then(data => handleNewTrip(data))
   }
 
   return (

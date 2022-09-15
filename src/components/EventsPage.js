@@ -15,7 +15,7 @@ return (
       </thead>
       <tbody>
         {eventsData
-        .filter(value => tripId === value.trip_id)
+        .filter(value => tripId === value.tripName)
         .map(value => 
               <tr key={value.id}>
                 <td>{value.event}</td>
