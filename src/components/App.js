@@ -72,26 +72,12 @@ export default App;
 // --NavBar
 // --Home
 // --TripsPage
-// ---New Trip Form
+// ---Trip Form
 // ---Trip List
 // ----Trip card
 // -----Events Page
 // --Submit event
-// --budget page 
+// --budget page
+// ---Total cost
+// ---pie graph 
 //
-
-
-// for each trip, we want to route to a page where we can see that trips events, we want our code
-// to pull in ONLY events for that trip.. 
-
-// should be able to do this by comparing the trip ID from our trips data and the trip_id that is 
-// saved to our events entry when a new event is created. 
-
-// ** can create a select with each trip name in it that updates and when the form is submitted
-// we can use some logic to 
-
-
-// want to be able to click on a trip and it take you to events related to that trip
-
-// want to click on the budget tab and it takes you to a page where each event is 
-// listed under each category

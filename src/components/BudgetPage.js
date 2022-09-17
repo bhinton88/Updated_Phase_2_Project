@@ -1,8 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap"
 import PieChart from "./PieChart";
-
-
+import TotalCost from "./TotalCost";
 
 
 function BudgetPage({ tripData, eventsData }) {
@@ -31,10 +30,11 @@ function BudgetPage({ tripData, eventsData }) {
                       <tr key={data.id}>
                         <td>{data.event}</td>
                         <td>{data.category}</td>
-                        <td>{data.cost}</td>
+                        <td>${data.cost}</td>
                       </tr>
                     )
                 }
+                <TotalCost tripName={value.tripName} eventsData={eventsData} />
               </tbody>
             </Table>
             </div>

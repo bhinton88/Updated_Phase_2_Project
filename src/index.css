@@ -20,7 +20,7 @@ body {
 #budgetcard {
   border-radius: 1rem;
   padding: 0.5rem;
-  height: auto;
+  height: 300px;
   display: inline-flex;
   margin: 1rem 1rem;
   flex-direction: row;
@@ -78,4 +78,8 @@ margin-inline: 5px;
 
 #piechartcontainer {
   margin-left: auto;
+}
+
+#totalcost {
+  background-color: lightblue;
 }

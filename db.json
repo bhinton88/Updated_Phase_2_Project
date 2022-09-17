@@ -42,15 +42,6 @@
       "start_date": "2023-04-15",
       "end_date": "2023-04-30",
       "id": 4
-    },
-    {
-      "tripName": "test",
-      "countries": [
-        "United States"
-      ],
-      "start_date": "2022-09-27",
-      "end_date": "2022-09-28",
-      "id": 5
     }
   ],
   "events": [
@@ -109,6 +100,78 @@
       "category": "Tourism",
       "date": "2011-08-04",
       "id": 7
+    },
+    {
+      "tripName": "Oktoberfest",
+      "event": "Beer/Pretzel",
+      "cost": "15.00",
+      "category": "Food",
+      "date": "2018-09-17",
+      "id": 8
+    },
+    {
+      "tripName": "Oktoberfest",
+      "event": "Hostel in Munich/Night 1",
+      "cost": "45.00",
+      "category": "Lodging",
+      "date": "2018-09-15",
+      "id": 9
+    },
+    {
+      "tripName": "Oktoberfest",
+      "event": "Hostel in Munich/Night 2",
+      "cost": "45.00",
+      "category": "Lodging",
+      "date": "2018-09-16",
+      "id": 10
+    },
+    {
+      "tripName": "Oktoberfest",
+      "event": "Entrance fee to Neuschwanstein castle",
+      "cost": "25.50",
+      "category": "Tourism",
+      "date": "2018-09-17",
+      "id": 11
+    },
+    {
+      "tripName": "Oktoberfest",
+      "event": "Train ticket to Neuschwanstein castle",
+      "cost": "35.00",
+      "category": "Transportation",
+      "date": "2018-09-17",
+      "id": 12
+    },
+    {
+      "tripName": "African Safari",
+      "event": "Safari",
+      "cost": "75.00",
+      "category": "Tourism",
+      "date": "2023-04-16",
+      "id": 13
+    },
+    {
+      "tripName": "African Safari",
+      "event": "Hotel/Night 1",
+      "cost": "150.00",
+      "category": "Lodging",
+      "date": "2023-04-15",
+      "id": 14
+    },
+    {
+      "tripName": "African Safari",
+      "event": "Dinner/Night 1",
+      "cost": "20.00",
+      "category": "Food",
+      "date": "2023-04-15",
+      "id": 15
+    },
+    {
+      "tripName": "African Safari",
+      "event": "Rental Car/Whole trip",
+      "cost": "350.00",
+      "category": "Transportation",
+      "date": "2023-04-15",
+      "id": 16
     }
   ]
 }

@@ -40,8 +40,17 @@ function EventSubmit({ tripData, handleNewEvent }) {
     })
     .then(response => response.json())
     .then(data => handleNewEvent(data))
-    
-    console.log(event.target)
+
+    setFormData({    
+      tripName:"",
+      event: "",
+      cost: 0.00,
+      category: "",
+      date: ""
+    })
+  
+  alert("Your Event was Submitted")
+
   }
 
   return(

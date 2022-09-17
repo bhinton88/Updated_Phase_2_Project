@@ -51,6 +51,8 @@ function TripForm({ handleNewTrip }) {
     })
     .then(response => response.json())
     .then(data => handleNewTrip(data))
+
+    // need to add some way to clear the form once it has been submitted
   }
 
   return (
