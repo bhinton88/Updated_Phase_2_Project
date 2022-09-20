@@ -6,6 +6,7 @@ import Home from "./Home";
 import TripPage from "./TripPage";
 import EventSubmit from "./EventSubmit";
 import BudgetPage from "./BudgetPage";
+import "bootstrap"
 
 function App() {
 

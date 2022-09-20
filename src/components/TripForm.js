@@ -52,7 +52,14 @@ function TripForm({ handleNewTrip }) {
     .then(response => response.json())
     .then(data => handleNewTrip(data))
 
-    // need to add some way to clear the form once it has been submitted
+    setFormData({ 
+      tripName: "",
+      countries:[],
+      start_date: "",
+      end_date: ""
+    })
+
+    alert("Your trip has been submitted")
   }
 
   return (

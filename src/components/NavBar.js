@@ -5,7 +5,7 @@ import {Nav, Navbar, Container} from "react-bootstrap"
 function NavBar() {
 
   return (
-    <div id="navbar">
+    <nav id="navbar">
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand href="#home">Travel with Friends!</Navbar.Brand>
@@ -21,7 +21,7 @@ function NavBar() {
         </Container>
       </Navbar>
 
-    </div>
+    </nav>
   )
 
 }
