@@ -17,13 +17,15 @@ Technologies used for this projects: React, HTML, CSS, JavaScript, Boostrap, Sem
 
 ## Setup
 
+Run `$ npm install`, then `$ npm start` to open web app.
+
 If you don't have `json-server` installed, run `$ npm i -g json-server`.
 
 If you already have it installed, run the server by: `$ json-server --watch db.json`.
 
 ## Status
 
-This projects is a passion project of mine. I am an avid traveller and have big dreams for where I can take this application as I learn more technologies 
+This projects will remain in progress as it is a passion project of mine. I am an avid traveller and have big dreams for where I can take this application as I learn more technologies 
 
 ## Author
 
